@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript, InfoWindowF } from "@react-google-maps/api";
 import { API_KEY } from "../config";
 
 const MapView = () => {
-  const [location, setLocation] = useState(null);
+  const [locations, setLocations] = useState([]);
 
   const center = {
     lat: -33.9173,
@@ -11,35 +11,34 @@ const MapView = () => {
   };
 
   useEffect(() => {
-    getLocation();
+    getLocations();
   }, []);
 
-  const getLocation = () => {
-    if (!navigator.geolocation) {
-      console.log("FUCK");
-    } else {
-      navigator.geolocation.getCurrentPosition((position) => {
-        setLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        });
-      });
-    }
+
+  // multiple locations
+  const getLocations = () => {
+    // Replace this with your own logic to fetch the list of locations
+    const locations = [
+      { id: 1, lat: -33.9169, lng: 151.2279, name: "Friend 1" },
+      { id: 2, lat: -33.9169, lng: 151.2298, name: "Friend 2" },
+      { id: 3, lat: -33.9173, lng: 151.2335, name: "Friend 3" },
+    ];
+
+    setLocations(locations);
   };
 
   return (
     <LoadScript googleMapsApiKey={API_KEY}>
       <GoogleMap
         center={center}
-        zoom={17}
+        zoom={14}
         mapContainerStyle={{ height: "100vh", width: "100vw" }}
       >
-        {" "}
-        {location != null ? (
-          <InfoWindowF key={0} position={location}>
-            <div>Hello from Christian</div>
+        {locations.map((location) => (
+          <InfoWindowF key={location.id} position={location}>
+            <div>{location.name}</div>
           </InfoWindowF>
-        ) : null}
+        ))}
       </GoogleMap>
     </LoadScript>
   );
