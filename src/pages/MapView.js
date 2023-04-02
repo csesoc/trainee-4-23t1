@@ -1,6 +1,6 @@
 import React from "react";
 import { GoogleMap, LoadScript, InfoWindowF } from "@react-google-maps/api";
-import API_KEY from "../../config.js";
+import { API_KEY } from "../config";
 
 const MapView = () => {
   const center = {
