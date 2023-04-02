@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
+import React from "react";
 import { GoogleMap, LoadScript, InfoWindowF } from "@react-google-maps/api";
 
-function App() {
+const MapView = () => {
   const center = {
     lat: -33.9173,
     lng: 151.2313,
@@ -14,7 +13,7 @@ function App() {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDszDT0VUQm8ivQAzXc8kG7AIbtjDjbZh4">
+    <LoadScript googleMapsApiKey="">
       <GoogleMap
         center={center}
         zoom={17}
@@ -30,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default MapView;
