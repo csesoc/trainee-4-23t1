@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleMap, LoadScript, InfoWindowF } from "@react-google-maps/api";
+import API_KEY from "../../config.js";
 
 const MapView = () => {
   const center = {
@@ -13,7 +14,7 @@ const MapView = () => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="">
+    <LoadScript googleMapsApiKey={API_KEY}>
       <GoogleMap
         center={center}
         zoom={17}
