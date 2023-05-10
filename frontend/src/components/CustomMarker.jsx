@@ -2,6 +2,7 @@ import React from "react";
 import { Marker } from "@react-google-maps/api";
 import image from "../assets/img/elon.jpg";
 
+// Currently not used
 const ProfileMarker = ({ lat, lng }) => {
   const icon = {
     url: image,
