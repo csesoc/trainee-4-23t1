@@ -40,6 +40,16 @@ app.post('/data', async (req, res) => {
   })
 });
 
+// Register route
+app.post('/register', async(req, res) => {
+  const { nameFirst, nameLast, username, email, password } = req.body;
+  const newData = MyModel.create({ nameFirst, nameLast, username, email, password }).then((ans) => {
+    res.send("Document inserted");
+  }).catch((err) => {
+    res.status(500).send(err.Message);
+  });
+});
+
 app.listen(8000, () => {
   console.log("Server started on port 8000");
 });
