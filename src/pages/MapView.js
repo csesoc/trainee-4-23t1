@@ -3,6 +3,7 @@ import { GoogleMap, LoadScript, InfoWindowF } from "@react-google-maps/api";
 import { API_KEY } from "../config";
 import image from "../assets/img/elon.jpg";
 
+// Temporary Location + profile map marker using a random location
 const MapView = () => {
   const [locations, setLocations] = useState([]);
 
