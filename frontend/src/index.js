@@ -1,20 +1,35 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import MapView from './pages/MapView';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
-function App () {
-  const token = localStorage.getItem('token');
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MapView/>} />
-      
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-}
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 
-export default App;
+const router = createBrowserRouter([
+  {
+    path: "/map",
+    element: <MapView />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },{
+    path: "/register",
+    element: <RegisterPage />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router}>
+      <Route path="/" element={<MapView />} />
+      <Route path="/login" element={<LoginPage />} />
+    </RouterProvider>
+  </React.StrictMode>
+);
