@@ -1,0 +1,219 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Logo */
+.logo {
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #AF69EE;
+  color: #fff;
+  padding: 10px 20px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.5s;
+  border: 2px solid #ffffff; 
+}
+
+.nav-links li a:hover {
+  background-color: #ffffff;
+  color: #864bd3;
+  font-weight: bold;
+}
+
+.nav-links li{
+  transition: 0.3s;
+}
+
+.nav-links li:hover{
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #AF69EE;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer p a{
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: #f1f1f1;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-form label {
+  font-weight:400;
+  font-size: 16px;
+}
+
+.login-form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form input::placeholder {
+  color: #898a86;
+}
+
+.login-form .remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.login-form .remember-me input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.login-form .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #bf81f8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #864bd3;
+}
+
+.login-form button[type="button"] {
+  background-color: #6c757d;
+}
+
+.login-form button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+.login-form a{
+  text-decoration: none;
+}
+/* Login page Media Queries */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .login-form {
+    width: 80%;
+  }
+}
+
+/* Register Page */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: #f1f1f1;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.register-form label {
+  font-weight:400;
+  font-size: 16px;
+}
+
+.register-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.register-form input::placeholder {
+  color: #898a86;
+}
+
+.register-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #bf81f8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #864bd3;
+}
+
+.register-form button[type="button"] {
+  background-color: #6c757d;
+}
+
+.register-form button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+.register-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+.register-form a{
+  text-decoration: none;
+}
