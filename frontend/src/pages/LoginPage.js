@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import "../assets/css/style.css";
 
 const LoginPage = () => {
@@ -32,6 +33,9 @@ const LoginPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Login | Who's On Campus?</title>
+      </Helmet>
       <nav className="navbar">
         <h1 className="logo">Who's On Campus?</h1>
         <ul className="nav-links">
@@ -69,7 +73,7 @@ const LoginPage = () => {
             <label htmlFor="rememberMe">Remember me</label>
           </div>
           <button type="submit">Log In</button>
-          <p>Don't have an account? <a href="https://github.com/csesoc/trainee-4-23t1">Register</a></p>
+          <p>Don't have an account? <a href="\register">Register</a></p>
         </form>
       </div>
       <footer className="footer">
