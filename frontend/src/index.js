@@ -4,6 +4,7 @@ import './index.css';
 import MapView from './pages/MapView';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import HomePage from './pages/HomePage';
 
 import {
   createBrowserRouter,
@@ -12,6 +13,10 @@ import {
 } from "react-router-dom";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
   {
     path: "/map",
     element: <MapView />,
