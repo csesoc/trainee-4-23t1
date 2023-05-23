@@ -218,3 +218,25 @@ body {
 .register-form a{
   text-decoration: none;
 }
+
+/* Home container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.map-container {
+  width: 1600px; 
+  height: 600px; 
+  margin: 20px auto; 
+  border: 10px solid #AF69EE; 
+  border-radius: 80px; 
+  overflow: hidden;
+}
+
+
+
