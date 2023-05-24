@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #AF69EE;
+  background-color: #5700c9;
   color: #fff;
   padding: 10px 20px;
 }
@@ -51,14 +51,14 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #AF69EE;
+  background-color: #5700c9;
   color: #fff;
   text-align: center;
   padding: 10px;
 }
 
 .footer p a{
-  color: #000000;
+  color: #f8e800;
   text-decoration: none;
 }
 
@@ -118,15 +118,17 @@ body {
 .login-form button {
   padding: 10px;
   font-size: 16px;
-  background-color: #bf81f8;
+  background-color: #5700c9;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
 
 .login-form button:hover {
-  background-color: #864bd3;
+  background-color: #3c008a;
+  text-transform: uppercase;
 }
 
 .login-form button[type="button"] {
@@ -192,15 +194,17 @@ body {
 .register-form button {
   padding: 10px;
   font-size: 16px;
-  background-color: #bf81f8;
+  background-color: #5700c9;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
 
 .register-form button:hover {
-  background-color: #864bd3;
+  background-color: #3c008a;
+  text-transform: uppercase;
 }
 
 .register-form button[type="button"] {
@@ -233,10 +237,78 @@ body {
   width: 1600px; 
   height: 600px; 
   margin: 20px auto; 
-  border: 10px solid #AF69EE; 
+  border: 10px solid #5500c5; 
   border-radius: 80px; 
   overflow: hidden;
 }
 
+/* Location form */
+.location-form {
+  display: flex;
+  justify-content: center;
+}
+
+/* Popup container */
+.popup-container {
+  display:grid;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.popup-container h4{
+  font-size:larger;
+}
+
+.popup-container button{
+  background-color: #7734cf;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  transition: transform 0.5s;
+}
+
+.popup-container button:hover{
+  background-color: #480c96;
+  transform: translateY(-4px);
+}
+
+/* Location form */
+.location-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.location-form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.location-form input {
+  display: block;
+  padding: 6px;
+  font-size: 16px;
+  width: 500px;
+}
+
+.location-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #7734cf;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px;
+  transition: transform 0.5s;
+}
+
+.location-form button:hover {
+  background-color: #480c96;
+  transform: scale(1.1);
+} 
 
 
