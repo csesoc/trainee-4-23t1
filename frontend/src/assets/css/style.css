@@ -223,7 +223,7 @@ body {
   text-decoration: none;
 }
 
-/* Home container */
+/* Home Page */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -242,7 +242,7 @@ body {
   overflow: hidden;
 }
 
-/* Popup container */
+/* Popup component */
 .popup-container {
   display:grid;
   padding: 20px;
@@ -321,4 +321,17 @@ body {
   transform: scale(1.1);
   text-transform: uppercase;
   background-color: #6829b9;
+}
+
+/* Landing Page */
+.landing-container {
+  display: block;
+  height: 100vh;
+  background-color: #cfbaf8;
+}
+
+.image-container {
+  float: right;
+  margin-top: 200px;
+  margin-right: 400px;
 }
