@@ -242,8 +242,8 @@ body {
   overflow: hidden;
 }
 
-/* Location form */
-.location-form {
+/* status form */
+.status-form {
   display: flex;
   justify-content: center;
 }
@@ -274,41 +274,64 @@ body {
   transform: translateY(-4px);
 }
 
-/* Location form */
+/* status form */
 .location-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.location-form label {
-  display: block;
-  margin-top: 10px;
+.duration-container {
+  display: flex;
+  gap: 10px;
   margin-bottom: 10px;
 }
 
-.location-form input {
-  display: block;
-  padding: 6px;
+.input-field {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 16px;
-  width: 500px;
 }
 
-.location-form button {
+.duration-input {
+  width: 70%;
+}
+
+.am-pm-select {
+  width: 30%;
+}
+
+.textarea-field {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
   padding: 10px;
   font-size: 16px;
-  background-color: #7734cf;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 50px;
-  transition: transform 0.5s;
+  background-color: #bf81f8;
+  color: white;
+  border-radius: 20px;
+  border-style: none;
+  margin: 10px;
+  width: 100px;
+  transition: 0.3s;
 }
 
-.location-form button:hover {
-  background-color: #480c96;
+.submit-button:hover {
   transform: scale(1.1);
-} 
-
+}
 
