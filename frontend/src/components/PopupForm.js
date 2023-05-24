@@ -36,7 +36,7 @@ export default function PopupForm() {
     <div className='popup-container'>
       <h4>Share your current location with friends</h4>
       <Popup
-        trigger={<button style={{ fontFamily: 'sans-serif', fontSize: '16px' }}> Update Location </button>}
+        trigger={<button style={{ fontFamily: 'sans-serif', fontSize: '16px', borderStyle: 'none'}}> Update Location </button>}
         modal
         nested
       >
