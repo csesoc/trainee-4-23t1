@@ -78,7 +78,7 @@ export default function PopupForm() {
                   className='textarea-field'
                 />
                 <div className='submit-container'>
-                  <button type='submit' className='submit-button'>Update</button>
+                  <button onClick={close} type='submit' className='submit-button'>Update</button>
                 </div>
               </form>
             </div>
