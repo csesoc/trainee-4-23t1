@@ -34,7 +34,7 @@ export default function PopupForm() {
 
   return (
     <div className='popup-container'>
-      <h4>Tell your friends your current position</h4>
+      <h4>Share your current location with friends</h4>
       <Popup
         trigger={<button style={{ fontFamily: 'sans-serif', fontSize: '16px' }}> Update Location </button>}
         modal

@@ -290,14 +290,6 @@ body {
   font-size: 16px;
 }
 
-.duration-input {
-  width: 70%;
-}
-
-.am-pm-select {
-  width: 30%;
-}
-
 .textarea-field {
   padding: 10px;
   margin-bottom: 10px;
@@ -328,4 +320,5 @@ body {
 .submit-button:hover {
   transform: scale(1.1);
   text-transform: uppercase;
+  background-color: #572a91;
 }
