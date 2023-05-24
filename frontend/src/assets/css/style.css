@@ -242,12 +242,6 @@ body {
   overflow: hidden;
 }
 
-/* status form */
-.status-form {
-  display: flex;
-  justify-content: center;
-}
-
 /* Popup container */
 .popup-container {
   display:grid;
@@ -274,7 +268,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* status form */
+/* Modal */
 .location-form {
   display: flex;
   flex-direction: column;
@@ -333,4 +327,5 @@ body {
 
 .submit-button:hover {
   transform: scale(1.1);
+  text-transform: uppercase;
 }
