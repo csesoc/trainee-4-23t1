@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Home | Who's On Campus?</title>
+        <title>Map | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
         <h1 className="logo">Who's On Campus?</h1>
