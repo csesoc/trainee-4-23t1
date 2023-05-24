@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../assets/css/style.css";
+import { Helmet } from 'react-helmet';
 
 const RegisterPage = () => {
     const [firstName, setFirstName] = useState('');
@@ -54,6 +55,9 @@ const RegisterPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Register | Who's On Campus?</title>
+      </Helmet>
       <nav className="navbar">
         <h1 className="logo">Who's On Campus?</h1>
         <ul className="nav-links">

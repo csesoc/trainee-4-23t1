@@ -1,10 +1,14 @@
 import React from 'react';
 import MapView from '../components/MapView';
 import PopupForm from '../components/PopupForm';
+import { Helmet } from 'react-helmet';
 
 const HomePage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Home | Who's On Campus?</title>
+      </Helmet>
       <nav className="navbar">
         <h1 className="logo">Who's On Campus?</h1>
         <ul className="nav-links">
