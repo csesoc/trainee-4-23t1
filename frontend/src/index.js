@@ -14,12 +14,8 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <HomePage />,
-  },
-  {
-    path: "/map",
-    element: <MapView />,
   },
   {
     path: "/login",
