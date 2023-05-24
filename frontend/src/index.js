@@ -5,6 +5,7 @@ import MapView from './components/MapView';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
+import LandingPage from './pages/LandingPage';
 
 import {
   createBrowserRouter,
@@ -14,13 +15,18 @@ import {
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
     path: "/home",
     element: <HomePage />,
   },
   {
     path: "/login",
     element: <LoginPage />,
-  },{
+  },
+  {
     path: "/register",
     element: <RegisterPage />,
   },
