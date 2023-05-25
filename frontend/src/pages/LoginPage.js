@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import "../assets/css/style.css";
+import { useNavigate } from 'react-router-dom';
+import { URL_PORT } from '../backend';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -29,6 +32,29 @@ const LoginPage = () => {
     setEmail('');
     setPassword('');
     setRememberMe(false);
+
+    /*
+    fetch(`http://localhost:${URL_PORT}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => { 
+        console.log(data);
+        if (data.error) {
+          alert(data.error);
+        } else {
+          localStorage.setItem('token', data.token);
+          navigate('/home');
+        }
+      }
+    );
+    */
+
+
   };
 
   return (

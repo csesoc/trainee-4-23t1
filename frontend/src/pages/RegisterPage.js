@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import "../assets/css/style.css";
 import { Helmet } from 'react-helmet';
+import { URL_PORT } from '../backend';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
+    const navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -44,6 +47,29 @@ const RegisterPage = () => {
         console.log('Password:', password);
         console.log('Phone Number:', phoneNumber);
         console.log('Address:', address);
+
+        // Maybe add username and profileImgUrl to the form?
+        
+        /*
+        fetch(`http://localhost:${URL_PORT}/register`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ firstName, lastName, email, password, phoneNumber, address }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              if (data.error) {
+                alert(data.error);
+              } else {
+                navigate('/home');
+              }
+            }
+        );
+        */
+            
         // Reset form fields
         setFirstName('');
         setLastName('');
