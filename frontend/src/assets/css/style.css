@@ -39,6 +39,7 @@ body {
   background-color: #ffffff;
   color: #864bd3;
   font-weight: bold;
+  border-style: none;
 }
 
 .nav-links li{
@@ -328,8 +329,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #cfbaf8;
+  min-height: 80vh;
+  background-color: #cfb9fc;
 }
 
 .content-wrapper {
@@ -370,13 +371,17 @@ body {
 
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; 
+  align-items: center;
+}
+
+.button-gap {
+  width: 20px; 
 }
 
 .button-container a.button {
-  padding: 10px 50px;
-  margin-right: 50px;
-  background-color: #7e44c9;
+  padding: 10px 30px;
+  background-color: #5e00da;
   color: white;
   border: none;
   cursor: pointer;
@@ -388,9 +393,26 @@ body {
 }
 
 .button-container a.button:hover {
-  background-color: #5e00da;
   transform: translateY(-3px);
 }
+
+.button-container button {
+  padding: 10px 30px;
+  background-color: #5e00da;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50px;
+  border-style: none;
+  transition: background-color 0.5s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.button-container button:hover {
+  transform: translateY(-3px);
+}
+
 
 .slogan-container {
   border-radius: 50px;
@@ -401,10 +423,50 @@ body {
 
 .content-wrapper h1 {
   font-size: 44px;
-  color: rgb(87, 87, 87);
+  color: rgb(68, 67, 67);
 }
 
 .content-wrapper h4 {
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(255, 255, 255);
+}
+
+/* Landing page 2 */
+.description-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #cfb9fc;
+}
+
+.help-container {
+  border-radius: 50px;
+  height: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.purpose-container{
+  color: rgb(80, 80, 80);
+  text-align: center;
+}
+
+.purpose-container h2{
+  color:white;
+  font-size: 35px;
+}
+
+.purpose-container h3{
+  font-size: 40px;
+}
+
+/* Landing page 3 */
+.map-showcase-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #cfb9fc;
 }
