@@ -381,7 +381,7 @@ body {
 
 .button-container a.button {
   padding: 10px 30px;
-  background-color: #5e00da;
+  background-color: #7734cf;
   color: white;
   border: none;
   cursor: pointer;
@@ -393,12 +393,13 @@ body {
 }
 
 .button-container a.button:hover {
+  background-color: #480c96;
   transform: translateY(-3px);
 }
 
 .button-container button {
   padding: 10px 30px;
-  background-color: #5e00da;
+  background-color: #7734cf;
   color: white;
   border: none;
   cursor: pointer;
@@ -410,6 +411,7 @@ body {
 }
 
 .button-container button:hover {
+  background-color: #480c96;
   transform: translateY(-3px);
 }
 
@@ -453,20 +455,91 @@ body {
   text-align: center;
 }
 
-.purpose-container h2{
-  color:white;
-  font-size: 35px;
-}
-
 .purpose-container h3{
   font-size: 40px;
+}
+
+.custom-button {
+  padding: 10px 30px;
+  background-color: #7734cf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50px;
+  border-style: none;
+  transition: background-color 0.5s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.custom-button:hover {
+  background-color: #480c96;
+  transform: translateY(-3px);
 }
 
 /* Landing page 3 */
 .map-showcase-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background-color: #cfb9fc;
+}
+
+.map-showcase-container h2{
+  color: rgb(80, 80, 80);
+  font-size: 30px;
+}
+
+.mapexample-container{
+  width: 1000px; 
+  height: 550px; 
+  margin: 20px auto; 
+  border: 12px solid #5500c5; 
+  border-radius: 80px; 
+  overflow: hidden;
+}
+
+.join-button-container {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+}
+.join-button-container a.button {
+  margin-top: 30px;
+  padding: 10px 30px;
+  background-color: #7734cf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50px;
+  border-style: none;
+  transition: background-color 0.5s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.join-button-container a.button:hover {
+  background-color: #480c96;
+  transform: translateY(-3px);
+  text-transform: uppercase;
+}
+
+.scroll-to-top-container {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+}
+
+
+.scroll-top-button {  
+  list-style: none;
+  margin-top: 30px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-top-button:hover {
+  transform: scale(1.3); 
 }

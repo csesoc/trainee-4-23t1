@@ -2,15 +2,29 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import logoImage from '../assets/img/logo.png';
+import MapExample from '../components/MapExample';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const HomePage = () => {
   const descriptionRef = useRef(null);
+  const mapRef = useRef(null);
 
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const carouselWords = ['Discover Meaningful Connections', 'Escape Loneliness', 'Become a BNOC', 'Create Meaningful Memories', 'Recover from Emotional Pain', 'Meet like Minded People']; 
+  const carouselWords = ['Discover Meaningful Connections.', 'Escape Loneliness.', 'Become a BNOC.', 'Create Meaningful Memories.', 'Recover from Emotional Pain.', 'Meet like Minded People.']; 
 
   const handleExploreClick = () => {
     descriptionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleContinueClick = () => {
+    mapRef.current.scrollIntoView({ behavior: 'smooth'});
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
@@ -55,14 +69,27 @@ const HomePage = () => {
       {/* Page 2 */}
       <div className='description-container' ref={descriptionRef}>
         <div className="purpose-container">
-          <h2>We help YOU</h2>
-            <h3 className='help-container'>{carouselWords[carouselIndex]}</h3>
+          <h3 className='help-container'>{carouselWords[carouselIndex]}</h3>
+          <button className="custom-button" onClick={handleContinueClick}>
+            Continue
+          </button>
         </div>
       </div>
 
       {/* Page 3 */}
-      <div className='map-showcase-container'>
-
+      <div className='map-showcase-container' ref={mapRef}>
+        <h2>Discover new friends through an interactive map.</h2>
+        <div className='mapexample-container'>
+          <MapExample/>
+        </div>
+        <div className="join-button-container">
+          <Link to="/register" className="button">Join us!</Link>
+        </div>
+        <div className='scroll-top-container'>
+          <li href="" className="scroll-top-button" onClick={scrollToTop}>
+            <i className="fas fa-angle-up"></i>
+          </li>
+        </div>
       </div>
 
       <footer className="footer">

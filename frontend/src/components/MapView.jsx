@@ -32,7 +32,7 @@ const MapView = () => {
     <LoadScript googleMapsApiKey={API_KEY}>
       <GoogleMap
         center={center}
-        zoom={14}
+        zoom={17}
         mapContainerStyle={{ height: "100vh", width: "100vw" }}
       >
         {locations.map((location) => (
