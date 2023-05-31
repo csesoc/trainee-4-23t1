@@ -10,7 +10,13 @@ const HomePage = () => {
   const mapRef = useRef(null);
 
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const carouselWords = ['Discover Meaningful Connections.', 'Escape Loneliness.', 'Become a BNOC.', 'Create Meaningful Memories.', 'Recover from Emotional Pain.', 'Meet like Minded People.']; 
+  const carouselWords = [
+    'Discover Meaningful Connections.', 
+    'Escape Loneliness.', 'Become a BNOC.', 
+    'Create Meaningful Memories.', 
+    'Recover from Emotional Pain.', 
+    'Meet like Minded People.'
+  ]; 
 
   const handleExploreClick = () => {
     descriptionRef.current.scrollIntoView({ behavior: 'smooth' });
