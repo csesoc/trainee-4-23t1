@@ -11,12 +11,12 @@ const HomePage = () => {
 
   const [carouselIndex, setCarouselIndex] = useState(0);
   const carouselWords = [
-    'Discover Meaningful Connections.', 
-    'Escape Loneliness.', 'Become a BNOC.', 
-    'Create Meaningful Memories.', 
-    'Recover from Emotional Pain.', 
+    'Discover Meaningful Connections.',
+    'Escape Loneliness.', 'Become a BNOC.',
+    'Create Meaningful Memories.',
+    'Recover from Emotional Pain.',
     'Meet like Minded People.'
-  ]; 
+  ];
 
   const handleExploreClick = () => {
     descriptionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -47,9 +47,9 @@ const HomePage = () => {
         <title>Home | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <h1 className="logo">CSESoc Projects</h1>
+      <h1 className="logo">Who's On Campus?</h1>
         <ul className="nav-links">
-          <li><a href="\login">Log In</a></li>
+          <li><Link to="/login">Log In</Link></li>
         </ul>
       </nav>
       {/* Page 1 */}
@@ -99,7 +99,7 @@ const HomePage = () => {
       </div>
 
       <footer className="footer">
-        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <a href="https://github.com/csesoc/trainee-4-23t1">here</a></p>
+        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
       </footer>
     </div>
   );

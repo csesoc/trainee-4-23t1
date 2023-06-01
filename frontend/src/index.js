@@ -16,7 +16,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/landing",
     element: <LandingPage />,
   },
   {

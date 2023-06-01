@@ -18,7 +18,7 @@ body {
   align-items: center;
   background-color: #4d00b3;
   color: #fff;
-  padding: 10px 20px;
+  padding: 3px 400px;
 }
 .nav-links {
   list-style: none;
@@ -31,8 +31,8 @@ body {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 20px;
-  transition: background-color 0.5s;
-  border: 2px solid #ffffff; 
+  transition: background-color 0.7s ease;
+  border: 2px solid #ffffff;
 }
 
 .nav-links li a:hover {
@@ -63,6 +63,26 @@ body {
   text-decoration: none;
 }
 
+/* Adjustable Screen Sizes for Laptop */
+@media screen and (min-width: 1100px) and (max-width: 1800px) {
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4d00b3;
+    color: #fff;
+    padding: 5px 250px;
+  }
+  /* Footer */
+  .footer {
+    background-color: #5700c9;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+  }
+}
+
 /* Login Page */
 .login-container {
   display: flex;
@@ -78,10 +98,8 @@ body {
   flex-direction: column;
   gap: 10px;
   width: 300px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .login-form label {
@@ -95,20 +113,12 @@ body {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .login-form input::placeholder {
   color: #898a86;
-}
-
-.login-form .remember-me {
-  display: flex;
-  align-items: center;
-}
-
-.login-form .remember-me input[type="checkbox"] {
-  margin-right: 5px;
 }
 
 .login-form .button-container {
@@ -117,14 +127,18 @@ body {
 }
 
 .login-form button {
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   background-color: #ba90f1;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .login-form button:hover {
@@ -142,17 +156,10 @@ body {
 
 .login-form p {
   text-align: center;
-  margin-top: 10px;
+  margin: 30px;
 }
 .login-form a{
   text-decoration: none;
-}
-/* Login page Media Queries */
-@media screen and (max-width: 768px) {
-  /* Adjust styles for smaller screens */
-  .login-form {
-    width: 80%;
-  }
 }
 
 /* Register Page */
@@ -168,12 +175,10 @@ body {
 .register-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 300px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .register-form label {
@@ -186,6 +191,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .register-form input::placeholder {
@@ -200,7 +206,10 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
+  width: 120px;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .register-form button:hover {
@@ -218,10 +227,35 @@ body {
 
 .register-form p {
   text-align: center;
-  margin-top: 10px;
+  margin: 20px;
 }
 .register-form a{
   text-decoration: none;
+}
+
+/* Adjustable Screen Sizes for Laptop */
+@media screen and (min-width: 1100px) and (max-width: 1800px) {
+  /* Register Page */
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: #f1f1f1;
+  }
+
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .register-form button{
+    margin-top: 20px;
+  }
 }
 
 /* Home Page */
@@ -234,19 +268,19 @@ body {
   background-color: #f1f1f1;
 }
 
+/* Map Component */
 .map-container {
-  width: 1600px; 
-  height: 600px; 
-  margin: 20px auto; 
-  border: 10px solid #5500c5; 
-  border-radius: 80px; 
+  width: 1500px;
+  height: 600px;
+  margin: 30px auto;
+  border: 10px solid #5500c5;
+  border-radius: 80px;
   overflow: hidden;
 }
 
 /* Popup component */
 .popup-container {
   display:grid;
-  padding: 20px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -269,6 +303,36 @@ body {
   transform: translateY(-4px);
 }
 
+/* Adjustable Screen Sizes for Laptop */
+@media screen and (min-width: 1100px) and (max-width: 1800px) {
+  /* Home Page */
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  /* Map Component */
+  .map-container {
+    width: 1000px;
+    height: 600px;
+    margin: 30px auto;
+    border: 10px solid #5500c5;
+    border-radius: 80px;
+    overflow: hidden;
+    margin-top:60px;
+  }
+  /* Popup component */
+  .popup-container {
+    display:grid;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}
 /* Modal */
 .location-form {
   display: flex;
@@ -493,17 +557,17 @@ body {
 }
 
 .mapexample-container{
-  width: 1000px; 
-  height: 550px; 
-  margin: 20px auto; 
-  border: 12px solid #5500c5; 
-  border-radius: 80px; 
+  width: 1200px;
+  height: 600px;
+  margin: 20px auto;
+  border: 12px solid #5500c5;
+  border-radius: 80px;
   overflow: hidden;
 }
 
 .join-button-container {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
 }
 .join-button-container a.button {
@@ -542,6 +606,26 @@ body {
 
 .scroll-top-button:hover {
   transform: scale(1.3);
+}
+
+/* Adjustable Screen Sizes for Laptop */
+@media screen and (min-width: 1100px) and (max-width: 1800px) {
+  .mapexample-container{
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    border: 12px solid #5500c5;
+    border-radius: 80px;
+    overflow: hidden;
+  }
+  
+  .scroll-top-button {
+    list-style: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
 }
 
 /* Profile Page */
