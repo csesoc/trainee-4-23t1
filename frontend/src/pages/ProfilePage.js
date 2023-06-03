@@ -24,14 +24,12 @@ const ProfilePage = () => {
   return (
     <div>
       <nav className="navbar">
-        <h1 className="logo">Who's On Campus?</h1>
+        <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
+          <h1 className="logo">Who's On Campus?</h1>
+        </Link>
         <ul className="nav-links">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/login">Logout</Link>
-          </li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/login">Logout</Link></li>
         </ul>
       </nav>
       <div className="profile-container">

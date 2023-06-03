@@ -117,7 +117,9 @@ const InputPage = () => {
     return (
         <div>
             <nav className="navbar">
+                <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
                 <h1 className="logo">Who's On Campus?</h1>
+                </Link>
                 <ul className="nav-links">
                 <li><Link to="/login">Logout</Link></li>
                 </ul>
