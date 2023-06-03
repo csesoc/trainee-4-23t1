@@ -114,7 +114,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .login-form input::placeholder {
@@ -138,7 +138,6 @@ body {
   width: 120px;
   margin: 0 auto;
   margin-top: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .login-form button:hover {
@@ -191,7 +190,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .register-form input::placeholder {
@@ -199,7 +198,7 @@ body {
 }
 
 .register-form button {
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   background-color: #ba90f1;
   color: #fff;
@@ -209,7 +208,6 @@ body {
   transition: background-color 0.3s ease;
   width: 120px;
   margin: 0 auto;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .register-form button:hover {
