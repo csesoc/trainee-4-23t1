@@ -910,6 +910,7 @@ body {
   scroll-snap-align: center;
 }
 
+/* Profile Page */
 .profile-container {
   display: flex;
   flex-direction: row;
@@ -947,7 +948,6 @@ body {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 .photo_changing {
   padding: 10px;
   font-size: 16px;
@@ -956,7 +956,8 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .orientation {
@@ -1013,4 +1014,90 @@ body {
 
 .turn_black {
   color: black;
+}
+
+.pfp {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.edit-profile {
+  margin-bottom: 40px;
+}
+
+/* Media query for laptop screen size */
+@media screen and (min-width: 1100px) and (max-width: 1800px) {
+  .profile-container {
+    height: 85vh;
+    flex-direction: row;
+    align-items: center;
+  }
+  .photocard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 48vh;
+    width: 200px;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    margin-right: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .photocard h2{
+    font-size: 18px;
+  }
+
+  .photocard h3{
+    font-size: 14px;
+  }
+
+  .profile-input {
+    margin-top: 1px;
+    margin-bottom: 0px;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+
+  .edit_space {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0px;
+    width: 60vh;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .orientation {
+    margin-left: 0;
+  }
+  .edit-profile {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  .profile-question {
+    font-size: 14px;
+  }
+  .photo_changing {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ba90f1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 }
