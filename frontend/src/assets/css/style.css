@@ -924,7 +924,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 40vh;
+  height: 45vh;
   width: 250px;
   margin-top: 100px;
   margin-right: 30px;
@@ -1036,9 +1036,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 48vh;
+    height: 53vh;
     width: 200px;
-    margin-top: 0px;
+    margin-top: 40px;
     margin-bottom: 80px;
     margin-right: 30px;
     padding: 20px;

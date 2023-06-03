@@ -2,9 +2,11 @@ import React from 'react';
 import MapView from '../components/MapView';
 import PopupForm from '../components/PopupForm';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const HomePage = () => {
+  const location = useLocation();
+  const { user } = location.state || {}; // Access the user object from location state
   return (
     <div>
       <Helmet>
@@ -15,7 +17,9 @@ const HomePage = () => {
           <h1 className="logo">Who's On Campus?</h1>
         </Link>
         <ul className="nav-links">
-          <li><Link to="/profile">Profile</Link></li>
+          <li>
+            <Link to={{ pathname: '/profile', state: { user } }}>Profile</Link>
+          </li> {/* Pass user object as state */}
           <li><Link to="/login">Logout</Link></li>
         </ul>
       </nav>

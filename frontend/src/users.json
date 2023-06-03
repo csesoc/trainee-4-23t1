@@ -1,126 +1,64 @@
-{
-    "users": [
-      {
-        "id": 1,
-        "name": "Rizz",
-        "email": "email@gmail.com",
-        "password": "password",
-        "degree": "Computer Science",
-        "followers": [2, 3, 4],
-        "following": [2, 3, 4],
-        "friendScore": 0,
-        "profilePic": "https://i.imgur.com/HmI52b.png"
-      },
-      {
-        "id": 2,
-        "name": "John",
-        "email": "john@example.com",
-        "password": "johnpassword",
-        "degree": "Mathematics",
-        "followers": [1, 3],
-        "following": [1, 3],
-        "friendScore": 0,
-        "profilePic": "https://i.imgur.com/UgD56b.png"
-      },
-      {
-        "id": 3,
-        "name": "Sarah",
-        "email": "sarah@example.com",
-        "password": "sarahpassword",
-        "degree": "Physics",
-        "followers": [1, 2, 4],
-        "following": [1, 2, 4],
-        "friendScore": 0,
-        "profilePic": "https://i.imgur.com/LYzymb.png"
-      },
-      {
-        "id": 4,
-        "name": "Alex",
-        "email": "alex@example.com",
-        "password": "alexpassword",
-        "degree": "Biology",
-        "followers": [1, 2, 3],
-        "following": [1, 2, 3],
-        "friendScore": 0,
-        "profilePic": "https://i.imgur.com/EuAKtb.png"
-      },
-      {
-        "id": 5,
-        "name": "Emily",
-        "email": "emily@example.com",
-        "password": "emilypassword",
-        "degree": "Chemistry",
-        "followers": [],
-        "following": [],
-        "friendScore": 0,
-        "profilePic": "https://i.imgur.com/EUBI6b.png"
-      }
-    ],
-    "locations": [
-      {
-        "locationId": 1,
-        "userId": 1,
-        "address": "10 Barker St, Kingsford NSW 2032",
-        "duration": 120,
-        "activity": "Studying",
-        "availabilities": [
-          {
-            "start": 1200,
-            "end": 1400
-          }
-        ],
-        "people": [2, 3, 4],
-        "description": "Studying for COMP1531"
-      },
-      {
-        "locationId": 2,
-        "userId": 1,
-        "address": "10 Barker St, Kingsford NSW 2032",
-        "duration": 90,
-        "activity": "Reading",
-        "availabilities": [
-          {
-            "start": 1000,
-            "end": 1130
-          },
-          {
-            "start": 1500,
-            "end": 1630
-          }
-        ],
-        "people": [2, 3],
-        "description": "Reading a novel"
-      },
-      {
-        "locationId": 3,
-        "userId": 2,
-        "address": "10 Barker St, Kingsford NSW 2032",
-        "duration": 180,
-        "activity": "Coding",
-        "availabilities": [
-          {
-            "start": 900,
-            "end": 1200
-          },
-          {
-            "start": 1400,
-            "end": 1700
-          }
-        ],
-        "people": [1],
-        "description": "Working on a programming project"
-      }
-    ],
-    "rizzTips": [
-      {
-        "id": 1,
-        "userId": 1,
-        "tip": "Don't forget to eat!"
-      },
-      {
-        "id": 2,
-        "userId": 2,
-        "tip": "Don't forget to sleep!"
-      }
-    ]
-  }
+[
+    {
+      "id": 1,
+      "name": "Rizz",
+      "username": "rizz",
+      "email": "edwlaw12@gmail.com",
+      "password": "pw",
+      "degree": "Computer Science",
+      "followers": [2, 3, 4],
+      "following": [2, 3, 4],
+      "friendScore": 0,
+      "profilePic": "https://i.imgur.com/HmI52b.png",
+      "locations": [1, 2],
+      "memberSince": "02/05/2023"
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "email": "john@example.com",
+      "password": "johnpassword",
+      "degree": "Mathematics",
+      "followers": [1, 3],
+      "following": [1, 3],
+      "friendScore": 0,
+      "profilePic": "https://i.imgur.com/UgD56b.png",
+      "locations": [3]
+    },
+    {
+      "id": 3,
+      "name": "Sarah",
+      "email": "sarah@example.com",
+      "password": "sarahpassword",
+      "degree": "Physics",
+      "followers": [1, 2, 4],
+      "following": [1, 2, 4],
+      "friendScore": 0,
+      "profilePic": "https://i.imgur.com/LYzymb.png",
+      "locations": []
+    },
+    {
+      "id": 4,
+      "name": "Alex",
+      "email": "alex@example.com",
+      "password": "alexpassword",
+      "degree": "Biology",
+      "followers": [1, 2, 3],
+      "following": [1, 2, 3],
+      "friendScore": 0,
+      "profilePic": "https://i.imgur.com/EuAKtb.png",
+      "locations": []
+    },
+    {
+      "id": 5,
+      "name": "Emily",
+      "email": "emily@example.com",
+      "password": "emilypassword",
+      "degree": "Chemistry",
+      "followers": [],
+      "following": [],
+      "friendScore": 0,
+      "profilePic": "https://i.imgur.com/EUBI6b.png",
+      "locations": []
+    }
+]

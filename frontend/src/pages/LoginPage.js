@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "../assets/css/style.css";
+import users from '../users.json';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -18,14 +20,16 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Remember Me:', rememberMe);
-    // Reset form fields
+    const foundUser = users.find(u => u.email === email && u.password === password);
+    if (foundUser) {
+      setUser(foundUser);
+      console.log('Logged in as:', foundUser.email);
+      navigate('/home', { state: { user: foundUser } });
+    } else {
+      console.log('Invalid credentials');
+    }
     setEmail('');
     setPassword('');
-    setRememberMe(false);
   };
 
   return (

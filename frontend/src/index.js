@@ -47,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}>
       <Route path="/" element={<MapView />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/home" element={<HomePage />} />
     </RouterProvider>
   </React.StrictMode>
 );

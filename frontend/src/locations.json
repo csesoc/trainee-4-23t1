@@ -1,0 +1,55 @@
+[
+  {
+    "locationId": 1,
+    "userId": 1,
+    "address": "10 Barker St, Kingsford NSW 2032",
+    "duration": 120,
+    "activity": "Studying",
+    "availabilities": [
+      {
+        "start": 1200,
+        "end": 1400
+      }
+    ],
+    "people": [2, 3, 4],
+    "description": "Studying for COMP1531"
+  },
+  {
+    "locationId": 2,
+    "userId": 1,
+    "address": "10 Barker St, Kingsford NSW 2032",
+    "duration": 90,
+    "activity": "Reading",
+    "availabilities": [
+      {
+        "start": 1000,
+        "end": 1130
+      },
+      {
+        "start": 1500,
+        "end": 1630
+      }
+    ],
+    "people": [2, 3],
+    "description": "Reading a novel"
+  },
+  {
+    "locationId": 3,
+    "userId": 2,
+    "address": "10 Barker St, Kingsford NSW 2032",
+    "duration": 180,
+    "activity": "Coding",
+    "availabilities": [
+      {
+        "start": 900,
+        "end": 1200
+      },
+      {
+        "start": 1400,
+        "end": 1700
+      }
+    ],
+    "people": [1],
+    "description": "Working on a programming project"
+  }
+]
