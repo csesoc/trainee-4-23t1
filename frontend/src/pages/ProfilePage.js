@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/css/style.css';
 import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 // import elon from '../assets/img/elon.jpg';
 // import user from '../users.json';
 
@@ -10,8 +11,7 @@ const ProfilePage = () => {
 
   const location = useLocation();
   const { user } = location.state || {};
-  
-  
+
   function handleImageUpload(event) {
     const selected_image = event.target.files[0];
     const imgurl = URL.createObjectURL(selected_image);
@@ -28,6 +28,9 @@ const ProfilePage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Profile | Who's On Campus?</title>
+      </Helmet>
       <nav className="navbar">
         <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
           <h1 className="logo">Who's On Campus?</h1>
@@ -115,38 +118,38 @@ const ProfilePage = () => {
                     <input className="profile-input" value={user.name} />
                   </div>
                   <div>
-                    <h4 className="profile-question">Address</h4>
-                    <input className="profile-input" value={user.address} />
+                    <h4 className="profile-question">Degree</h4>
+                    <input className="profile-input" value={user.degree} />
                   </div>
                 </div>
                 <div className="divide">
                   <div style={{ marginRight: '50px' }}>
-                    <h4 className="profile-question">City:</h4>
-                    <input className="profile-input" value={user.city} />
+                    <h4 className="profile-question">Suburb</h4>
+                    <input className="profile-input" value={user.suburb} />
                   </div>
                   <div>
-                    <h4 className="profile-question">Zip Code:</h4>
-                    <input className="profile-input" value={user.zipCode} />
+                    <h4 className="profile-question">Zip Code</h4>
+                    <input className="profile-input" value={user.zipcode} />
                   </div>
                 </div>
                 <div className="divide">
                   <div style={{ marginRight: '50px' }}>
-                    <h4 className="profile-question">State:</h4>
+                    <h4 className="profile-question">State</h4>
                     <input className="profile-input" value={user.state} />
                   </div>
                   <div>
-                    <h4 className="profile-question">Card Number</h4>
-                    <input className="profile-input" value={user.cardNumber} />
+                    <h4 className="profile-question">Followers</h4>
+                    <input className="profile-input" value={user.followers.length} />
                   </div>
                 </div>
                 <div className="divide">
                   <div style={{ marginRight: '50px' }}>
-                    <h4 className="profile-question">Expiry Date</h4>
-                    <input className="profile-input" value={user.expiryDate} />
+                    <h4 className="profile-question">Friend Score</h4>
+                    <input className="profile-input" value={user.friendScore} />
                   </div>
                   <div>
-                    <h4 className="profile-question">CVV:</h4>
-                    <input className="profile-input" value={user.cvv} />
+                    <h4 className="profile-question">Following:</h4>
+                    <input className="profile-input" value={user.following.length} />
                   </div>
                 </div>
                 <div className="photo_changing" style={{ width: 85, marginTop: '10px' }}>
