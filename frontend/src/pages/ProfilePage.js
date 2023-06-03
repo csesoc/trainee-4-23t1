@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/css/style.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-// import elon from '../assets/img/elon.jpg';
-// import user from '../users.json';
 
 const ProfilePage = () => {
   const [tab, setTab] = useState(0);
@@ -26,6 +24,11 @@ const ProfilePage = () => {
     setTab(1);
   };
 
+  const navigate = useNavigate();
+  const click = () => {
+    navigate('/home', { state: { user } });
+  }
+
   return (
     <div>
       <Helmet>
@@ -36,7 +39,9 @@ const ProfilePage = () => {
           <h1 className="logo">Who's On Campus?</h1>
         </Link>
         <ul className="nav-links">
-          <li><Link to="/home">Home</Link></li>
+          <li>
+          <a onClick={click}>Home</a>
+            </li>
           <li><Link to="/login">Logout</Link></li>
         </ul>
       </nav>
