@@ -6,11 +6,11 @@ import "../assets/css/style.css";
 
 const InputPage = () => {
     const questions = [
-        "What is their name",
-        "What do they study",
-        "What days are they on campus",
-        "Schedule a date with this person",
-        "What is their friend tag"
+        "What is your nickname",
+        "What do you study",
+        "Which days are you on campus",
+        "What time do you usually leave campus",
+        "What are you interested in"
 
     ]
 
@@ -19,14 +19,14 @@ const InputPage = () => {
         "Degree Name",
         "Days",
         "test",
-        "Tag (Optional)"
+        "Interests"
     ]
 
     const input_type = [
         "text",
         "text",
         "text",
-        "datetime-local",
+        "time",
         "text"
     ]
 
@@ -80,7 +80,7 @@ const InputPage = () => {
     }
 
     const handleHome = () => {
-        window.location.href = '../login';
+        window.location.href = '../home';
     }
     const handleAnswerChange = (selectedOptions) => {
         const the_answer = selectedOptions.map(option => option.value);
@@ -95,6 +95,7 @@ const InputPage = () => {
     const handleCircleClick = (clickedIndex) => {
         if (clickedIndex <= currentIndex) {
             setCurrentIndex(clickedIndex);
+            setFadeIn(true);
         }
     }
 
@@ -111,17 +112,19 @@ const InputPage = () => {
         }
     }
 
+    // Find people around you that are similar to you by first telling me about yourself
     return (
         <div>
             <nav className="navbar">
                 <h1 className="logo">Who's On Campus?</h1>
                 <ul className="nav-links">
-                <li><a href="/login">Log In</a></li>
+                <li><a href="/login">Profile</a></li>
+                <li><a href="/login">Logout</a></li>
                 </ul>
             </nav>
                 {!submitted ? (
                 <div className='input-container'>
-                    <p className='summary'>Once you have spoken to someone new, ask them the following questions</p>
+                    <p className='summary'>Find people around you that are similar to you by first telling me about yourself</p>
                         <br></br>
                         <h1 className={`${fadeIn ? 'question-label' : ''}`}>{question}</h1>
                     <form className='input-form' onSubmit={handleSubmit}>
@@ -199,13 +202,12 @@ const InputPage = () => {
                             <div class="checkmark draw"></div>
                         </div>
                         <h1>
-                            Congratulations!
+                            Congratulations! 
                         </h1>
                         <p>
-                            You made one more new friend.
+                           You can now go make more friends
                         </p>
-                        <button type="submit" onClick={handleReset}>I found another new friend</button>
-                        <button type="submit" onClick={handleHome}>Return to homepage</button>
+                        <button type="submit" onClick={handleHome}>Next</button>
                         </div>
                     </div>
 
