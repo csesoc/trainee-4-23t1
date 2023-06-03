@@ -7,11 +7,12 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 const HomePage = () => {
   const descriptionRef = useRef(null);
+  const landing = useRef(null);
   const mapRef = useRef(null);
 
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const carouselWords = ['Discover Meaningful Connections.', 'Escape Loneliness.', 'Become a BNOC.', 'Create Meaningful Memories.', 'Recover from Emotional Pain.', 'Meet like Minded People.']; 
 
+  const carouselWords = [`★★★★✩ "I discover meaningful connections."`, `★★★★★ "I escaped loneliness."`, `★★★★✩ "I became a BNOC."`, `★★★★★ "I created meaningful memories."`, `★★★★★ "I recovered from emotional pain."`, `★★★★✩ "I met like minded people."`]; 
   const handleExploreClick = () => {
     descriptionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -21,22 +22,27 @@ const HomePage = () => {
   };
 
   const scrollToTop = () => {
+    landing.current.scrollIntoView({ behavior: 'smooth' });
+    /*
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    });
+    });*/
   };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setCarouselIndex((prevIndex) => (prevIndex + 1) % carouselWords.length);
-    }, 2000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [carouselIndex, carouselWords.length]);
 
+  /*
+          <div className="image-container">
+            <img src={amongus}></img></div> */
   return (
-    <div>
+    <div className='landing'>
       <Helmet>
         <title>Home | Who's On Campus?</title>
       </Helmet>
@@ -47,7 +53,7 @@ const HomePage = () => {
         </ul>
       </nav>
       {/* Page 1 */}
-      <div className='landing-container'>
+      <div className='landing-container' ref={landing}>
         <div className="content-wrapper">
           <div className="side-by-side-container">
             <img src={logoImage} alt="Application logo" />
@@ -70,9 +76,10 @@ const HomePage = () => {
       <div className='description-container' ref={descriptionRef}>
         <div className="purpose-container">
           <h3 className='help-container'>{carouselWords[carouselIndex]}</h3>
+          <h4 style={{ position: "relative", bottom: "3vh", textAlign: "right" }}> - Edward Lukman</h4>
           <button className="custom-button" onClick={handleContinueClick}>
             Continue
-          </button>
+          </button>  
         </div>
       </div>
 
@@ -91,10 +98,10 @@ const HomePage = () => {
           </li>
         </div>
       </div>
-
       <footer className="footer">
         <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <a href="https://github.com/csesoc/trainee-4-23t1">here</a></p>
       </footer>
+
     </div>
   );
 };
