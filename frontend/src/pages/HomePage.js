@@ -2,6 +2,7 @@ import React from 'react';
 import MapView from '../components/MapView';
 import PopupForm from '../components/PopupForm';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -10,10 +11,12 @@ const HomePage = () => {
         <title>Map | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <h1 className="logo">Who's On Campus?</h1>
+        <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
+          <h1 className="logo">Who's On Campus?</h1>
+        </Link>
         <ul className="nav-links">
-          <li><a href="\">Profile</a></li>
-          <li><a href="/login">Logout</a></li>
+          <li><Link to="/profile">Profile</Link></li>
+          <li><Link to="/login">Logout</Link></li>
         </ul>
       </nav>
       <div className="home-container">
@@ -25,7 +28,7 @@ const HomePage = () => {
         </div>
       </div>
       <footer className="footer">
-        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <a href="https://github.com/csesoc/trainee-4-23t1">here</a></p>
+        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
       </footer>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../assets/css/style.css";
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const RegisterPage = () => {
     const [firstName, setFirstName] = useState('');
@@ -9,30 +10,18 @@ const RegisterPage = () => {
     const [password, setPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [address, setAddress] = useState('');
-  
 
     const handleFirstNameChange = (e) => {
         setFirstName(e.target.value);
       };
-    
       const handleLastNameChange = (e) => {
         setLastName(e.target.value);
       };
-    
       const handleEmailChange = (e) => {
         setEmail(e.target.value);
       };
-    
       const handlePasswordChange = (e) => {
         setPassword(e.target.value);
-      };
-    
-      const handlePhoneNumberChange = (e) => {
-        setPhoneNumber(e.target.value);
-      };
-    
-      const handleAddressChange = (e) => {
-        setAddress(e.target.value);
       };
 
     const handleSubmit = (e) => {
@@ -59,9 +48,11 @@ const RegisterPage = () => {
         <title>Register | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <h1 className="logo">Who's On Campus?</h1>
+        <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
+          <h1 className="logo">Who's On Campus?</h1>
+        </Link>
         <ul className="nav-links">
-          <li><a href="/login">Log In</a></li>
+          <li><Link to="/login">Log In</Link></li>
         </ul>
       </nav>
       <div className="register-container">
@@ -85,24 +76,6 @@ const RegisterPage = () => {
             onChange={handleLastNameChange}
             required
           />
-          <label htmlFor="phoneNumber">Phone Number</label>
-          <input
-            type="text"
-            id="phoneNumber"
-            placeholder="Phone Number"
-            value={phoneNumber}
-            onChange={handlePhoneNumberChange}
-            required
-          />
-          <label htmlFor="address">Address</label>
-          <input
-            type="text"
-            id="address"
-            placeholder="Address"
-            value={address}
-            onChange={handleAddressChange}
-            required
-          />
           <label htmlFor="email">Email Address</label>
           <input
             type="email"
@@ -122,11 +95,11 @@ const RegisterPage = () => {
             required
           />
           <button type="submit">Register</button>
-          <p>Already have an account? <a href="/login">Log In</a></p>
+          <p>Already have an account? <Link to="/login">Log In</Link></p>
         </form>
       </div>
       <footer className="footer">
-        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <a href="https://github.com/csesoc/trainee-4-23t1">here</a></p>
+        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
       </footer>
     </div>
   );

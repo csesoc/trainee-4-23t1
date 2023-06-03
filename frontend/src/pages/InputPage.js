@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 import Confetti from 'react-confetti';
+import { Link } from 'react-router-dom';
 import "../assets/css/style.css";
 
 
@@ -118,8 +119,7 @@ const InputPage = () => {
             <nav className="navbar">
                 <h1 className="logo">Who's On Campus?</h1>
                 <ul className="nav-links">
-                <li><a href="/login">Profile</a></li>
-                <li><a href="/login">Logout</a></li>
+                <li><Link to="/login">Logout</Link></li>
                 </ul>
             </nav>
                 {!submitted ? (
@@ -202,7 +202,7 @@ const InputPage = () => {
                             <div class="checkmark draw"></div>
                         </div>
                         <h1>
-                            Congratulations! 
+                            Congratulations!
                         </h1>
                         <p>
                            You can now go make more friends

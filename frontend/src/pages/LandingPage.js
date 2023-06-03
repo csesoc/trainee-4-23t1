@@ -11,7 +11,6 @@ const HomePage = () => {
   const mapRef = useRef(null);
 
   const [carouselIndex, setCarouselIndex] = useState(0);
-
   const carouselWords = [`★★★★✩ "I discover meaningful connections."`, `★★★★★ "I escaped loneliness."`, `★★★★✩ "I became a BNOC."`, `★★★★★ "I created meaningful memories."`, `★★★★★ "I recovered from emotional pain."`, `★★★★✩ "I met like minded people."`]; 
   const handleExploreClick = () => {
     descriptionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -47,9 +46,9 @@ const HomePage = () => {
         <title>Home | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <h1 className="logo">CSESoc Projects</h1>
+      <h1 className="logo">Who's On Campus?</h1>
         <ul className="nav-links">
-          <li><a href="\login">Log In</a></li>
+          <li><Link to="/login">Log In</Link></li>
         </ul>
       </nav>
       {/* Page 1 */}
@@ -99,7 +98,7 @@ const HomePage = () => {
         </div>
       </div>
       <footer className="footer">
-        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <a href="https://github.com/csesoc/trainee-4-23t1">here</a></p>
+        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
       </footer>
 
     </div>

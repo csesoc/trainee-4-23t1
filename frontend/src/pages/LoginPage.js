@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import "../assets/css/style.css";
 
 const LoginPage = () => {
@@ -13,10 +14,6 @@ const LoginPage = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-  };
-
-  const handleRememberMeChange = () => {
-    setRememberMe(!rememberMe);
   };
 
   const handleSubmit = (e) => {
@@ -37,9 +34,11 @@ const LoginPage = () => {
         <title>Login | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <h1 className="logo">Who's On Campus?</h1>
+        <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
+          <h1 className="logo">Who's On Campus?</h1>
+        </Link>
         <ul className="nav-links">
-          <li><a href="\register">Register</a></li>
+          <li><Link to="/register" className='link-style'>Register</Link></li>
         </ul>
       </nav>
       <div className="login-container">
@@ -63,21 +62,12 @@ const LoginPage = () => {
             onChange={handlePasswordChange}
             required
           />
-          <div className="remember-me">
-            <input
-              type="checkbox"
-              id="rememberMe"
-              checked={rememberMe}
-              onChange={handleRememberMeChange}
-            />
-            <label htmlFor="rememberMe">Remember me</label>
-          </div>
           <button type="submit">Log In</button>
-          <p>Don't have an account? <a href="\register">Register</a></p>
+          <p>Don't have an account? <Link to="/register">Register</Link></p>
         </form>
       </div>
       <footer className="footer">
-        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <a href="https://github.com/csesoc/trainee-4-23t1">here</a></p>
+        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
       </footer>
     </div>
   );

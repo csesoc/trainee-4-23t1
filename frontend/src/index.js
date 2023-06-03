@@ -6,8 +6,8 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
+import ProfilePage from './pages/ProfilePage';
 import InputPage from './pages/InputPage';
-import Profile from './pages/Profile'
 
 import {
   createBrowserRouter,
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <ProfilePage />,
   },
 ]);
 
