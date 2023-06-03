@@ -25,7 +25,7 @@ const HomePage = () => {
         </Link>
         <ul className="nav-links">
           <li>
-          <a onClick={abc}>Profile</a>
+          <a className='hoverable-link' onClick={abc}>Profile</a>
           </li> {/* Pass user object as state */}
           <li><Link to="/login">Logout</Link></li>
         </ul>

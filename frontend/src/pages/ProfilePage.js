@@ -40,7 +40,7 @@ const ProfilePage = () => {
         </Link>
         <ul className="nav-links">
           <li>
-          <a onClick={click}>Home</a>
+          <a className='hoverable-link' onClick={click}>Home</a>
             </li>
           <li><Link to="/login">Logout</Link></li>
         </ul>
