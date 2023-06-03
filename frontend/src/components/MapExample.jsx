@@ -13,8 +13,8 @@ const MapView = () => {
   const [locations, setLocations] = useState([]);
 
   const center = {
-    lat: -33.9188,
-    lng: 151.2365,
+    lat: -33.9185,
+    lng: 151.2345,
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const MapView = () => {
         mapContainerStyle={{ height: "100vh", width: "100vw" }}
       >
         {locations.map((location) => (
-          <InfoWindowF 
+          <InfoWindowF
             key={location.id} position={location}>
             <div>
               <img

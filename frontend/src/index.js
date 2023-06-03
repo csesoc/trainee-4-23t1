@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
+import ProfilePage from './pages/ProfilePage';
 
 import {
   createBrowserRouter,
@@ -15,7 +16,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/landing",
     element: <LandingPage />,
   },
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegisterPage />,
+  },
+  {
+    path: "/profile",
+    element: <ProfilePage />,
   },
 ]);
 
