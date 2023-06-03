@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import '../assets/css/style.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // import elon from '../assets/img/elon.jpg';
-// import usersData from '../users.json';
+// import user from '../users.json';
 
-const ProfilePage = ({ user }) => {
+const ProfilePage = () => {
   const [tab, setTab] = useState(0);
   const [profileImage, setProfileImage] = useState(null);
 
+  const location = useLocation();
+  const { user } = location.state || {};
+  
+  
   function handleImageUpload(event) {
     const selected_image = event.target.files[0];
     const imgurl = URL.createObjectURL(selected_image);
