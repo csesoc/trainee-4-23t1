@@ -73,13 +73,6 @@ const InputPage = () => {
     }
     };
 
-    const handleReset = () => {
-        setCurrentIndex(0);
-        setFadeIn(true);
-        setSubmitted(false);
-        setAnswer([]);
-    }
-
     const handleHome = () => {
         window.location.href = '../home';
     }
