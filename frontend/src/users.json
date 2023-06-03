@@ -1,10 +1,10 @@
 [
     {
       "id": 1,
-      "name": "Rizz",
+      "name": "Luke",
       "username": "rizzler",
-      "email": "edwlaw12@gmail.com",
-      "password": "pw",
+      "email": "Luke@gmail.com",
+      "password": "luke",
       "degree": "Computer Science",
       "followers": [2, 3, 4, 5],
       "following": [2, 3, 4],
@@ -72,7 +72,7 @@
       "password": "emilypassword",
       "degree": "Chemistry",
       "followers": [],
-      "following": [],
+      "following": [1],
       "friendScore": 0,
       "profilePic": "https://i.imgur.com/EUBI6b.png",
       "locations": []
