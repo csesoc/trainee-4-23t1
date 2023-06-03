@@ -596,8 +596,8 @@ body {
 
 .scroll-top-button {
   list-style: none;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 20px;
   transition: transform 0.3s ease;
 }
