@@ -9,7 +9,7 @@ const HomePage = () => {
         <title>Profile | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <Link to='/landing'  style={{ textDecoration: 'none', color: '#fff' }}>
+        <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
           <h1 className="logo">Who's On Campus?</h1>
         </Link>
         <ul className="nav-links">
