@@ -1,46 +1,53 @@
 import React, { useState } from 'react';
 import "../assets/css/style.css";
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [address, setAddress] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [address, setAddress] = useState('');
 
-    const handleFirstNameChange = (e) => {
-        setFirstName(e.target.value);
-      };
-      const handleLastNameChange = (e) => {
-        setLastName(e.target.value);
-      };
-      const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-      };
-      const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-      };
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle registration logic here
-        console.log('First Name:', firstName);
-        console.log('Last Name:', lastName);
-        console.log('Email:', email);
-        console.log('Password:', password);
-        console.log('Phone Number:', phoneNumber);
-        console.log('Address:', address);
-        // Reset form fields
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPassword('');
-        setPhoneNumber('');
-        setAddress('');
-    };
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle registration logic here
+    console.log('First Name:', firstName);
+    console.log('Last Name:', lastName);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('Phone Number:', phoneNumber);
+    console.log('Address:', address);
+    // Reset form fields
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPassword('');
+    setPhoneNumber('');
+    setAddress('');
+    // Navigate to the input page
+    navigate('/input');
+  };
 
   return (
     <div>
@@ -48,11 +55,13 @@ const RegisterPage = () => {
         <title>Register | Who's On Campus?</title>
       </Helmet>
       <nav className="navbar">
-        <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
+        <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
           <h1 className="logo">Who's On Campus?</h1>
         </Link>
         <ul className="nav-links">
-          <li><Link to="/login">Log In</Link></li>
+          <li>
+            <Link to="/login">Log In</Link>
+          </li>
         </ul>
       </nav>
       <div className="register-container">
@@ -95,11 +104,16 @@ const RegisterPage = () => {
             required
           />
           <button type="submit">Register</button>
-          <p>Already have an account? <Link to="/login">Log In</Link></p>
+          <p>
+            Already have an account? <Link to="/login">Log In</Link>
+          </p>
         </form>
       </div>
       <footer className="footer">
-        <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
+        <p>
+          &copy; 2023 CSESoc-Trainee 4 | Visit our repository{' '}
+          <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link>
+        </p>
       </footer>
     </div>
   );
