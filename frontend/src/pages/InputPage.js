@@ -3,7 +3,7 @@ import Select from 'react-select';
 import Confetti from 'react-confetti';
 import { Link } from 'react-router-dom';
 import "../assets/css/style.css";
-
+import { Helmet } from 'react-helmet';
 
 const InputPage = () => {
     const questions = [
@@ -109,6 +109,9 @@ const InputPage = () => {
     // Find people around you that are similar to you by first telling me about yourself
     return (
         <div>
+            <Helmet>
+                <title>About you | Who's On Campus?</title>
+            </Helmet>
             <nav className="navbar">
                 <Link to='/'  style={{ textDecoration: 'none', color: '#fff' }}>
                 <h1 className="logo">Who's On Campus?</h1>
