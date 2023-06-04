@@ -100,7 +100,7 @@ const HomePage = () => {
       <footer className="footer">
         <p>&copy; 2023 CSESoc-Trainee 4 | Visit our repository <Link to="https://github.com/csesoc/trainee-4-23t1">here</Link></p>
       </footer>
-
+      
     </div>
   );
 };
