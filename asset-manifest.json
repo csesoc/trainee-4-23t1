@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/whos_on_campus/static/css/main.f3dd0a6a.css",
+    "main.js": "/whos_on_campus/static/js/main.b596da44.js",
+    "static/media/fa-solid-900.ttf": "/whos_on_campus/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/friend1.png": "/whos_on_campus/static/media/friend1.1cba5d60bd53dfefe3d6.png",
+    "static/media/fa-brands-400.ttf": "/whos_on_campus/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/friend3.png": "/whos_on_campus/static/media/friend3.099f7c1717991944eb52.png",
+    "static/media/fa-solid-900.woff2": "/whos_on_campus/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/friend5.png": "/whos_on_campus/static/media/friend5.3110a34ac257a2699796.png",
+    "static/media/friend2.png": "/whos_on_campus/static/media/friend2.9c63b74eb531c54c4838.png",
+    "static/media/logo.png": "/whos_on_campus/static/media/logo.8e86803c279b645db86e.png",
+    "static/media/friend4.png": "/whos_on_campus/static/media/friend4.2d44a2fd5518db5648aa.png",
+    "static/media/friend6.png": "/whos_on_campus/static/media/friend6.f64e02546a9cced5e56f.png",
+    "static/media/fa-brands-400.woff2": "/whos_on_campus/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/whos_on_campus/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/fa-regular-400.woff2": "/whos_on_campus/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/whos_on_campus/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/whos_on_campus/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/whos_on_campus/index.html",
+    "main.f3dd0a6a.css.map": "/whos_on_campus/static/css/main.f3dd0a6a.css.map",
+    "main.b596da44.js.map": "/whos_on_campus/static/js/main.b596da44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3dd0a6a.css",
+    "static/js/main.b596da44.js"
+  ]
+}
