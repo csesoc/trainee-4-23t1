@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/whos_on_campus/static/css/main.f3dd0a6a.css",
-    "main.js": "/whos_on_campus/static/js/main.b596da44.js",
+    "main.js": "/whos_on_campus/static/js/main.459eacd6.js",
     "static/media/fa-solid-900.ttf": "/whos_on_campus/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/friend1.png": "/whos_on_campus/static/media/friend1.1cba5d60bd53dfefe3d6.png",
     "static/media/fa-brands-400.ttf": "/whos_on_campus/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -19,10 +19,10 @@
     "static/media/fa-v4compatibility.woff2": "/whos_on_campus/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/whos_on_campus/index.html",
     "main.f3dd0a6a.css.map": "/whos_on_campus/static/css/main.f3dd0a6a.css.map",
-    "main.b596da44.js.map": "/whos_on_campus/static/js/main.b596da44.js.map"
+    "main.459eacd6.js.map": "/whos_on_campus/static/js/main.459eacd6.js.map"
   },
   "entrypoints": [
     "static/css/main.f3dd0a6a.css",
-    "static/js/main.b596da44.js"
+    "static/js/main.459eacd6.js"
   ]
 }
